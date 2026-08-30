@@ -6,5 +6,5 @@
 
   networking.firewall = {
     trustedInterfaces = [ "tailscale0" ];
-  }
+  };
 }

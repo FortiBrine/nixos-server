@@ -2,6 +2,7 @@
   imports = [
     ../../users/fortibrine.nix
     ../../profiles/dhcp.nix
+    ../../profiles/tailscale.nix
     ../../common/bundle.nix
   ];
 
