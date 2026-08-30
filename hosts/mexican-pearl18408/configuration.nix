@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   imports = [
     ../../users/fortibrine.nix
     ../../profiles/cloud-init-network.nix
@@ -15,6 +15,8 @@
   ];
   networking.hostName = "mexican-pearl18408";
   time.timeZone = "Europe/Warsaw";
+
+  services.openssh.openFirewall = lib.mkForce false;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";

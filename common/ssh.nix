@@ -2,7 +2,7 @@
   services.openssh = {
     enable = true;
     ports = [ 2222 ];
-#     openFirewall = false;
+
     settings = {
       AllowUsers = [ "fortibrine" ];
 
