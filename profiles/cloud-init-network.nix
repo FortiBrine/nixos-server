@@ -1,4 +1,4 @@
-{ lib, ... } {
+{ lib, ... }: {
   networking.useDHCP = false;
   networking.networkmanager.enable = true;
   networking.useNetworkd = lib.mkForce false;
