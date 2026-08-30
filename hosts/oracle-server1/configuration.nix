@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   imports = [
     ../../users/fortibrine.nix
     ../../profiles/dhcp.nix
