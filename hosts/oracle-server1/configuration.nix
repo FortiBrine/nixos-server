@@ -16,7 +16,7 @@
   ];
   networking.hostName = "oracle-server1";
 
-  networking.firewall.allowedTCPPorts = [ 2222 ];
+  services.openssh.openFirewall = lib.mkForce false;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
