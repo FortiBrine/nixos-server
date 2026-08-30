@@ -14,6 +14,14 @@
           ./hosts/oracle-server1/configuration.nix
         ];
       };
+
+      mexican-pearl18408 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/mexican-pearl18408/hardware-configuration.nix
+          ./hosts/mexican-pearl18408/configuration.nix
+        ];
+      };
     };
   };
 }

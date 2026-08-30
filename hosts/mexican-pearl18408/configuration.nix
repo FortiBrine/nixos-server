@@ -1,0 +1,22 @@
+{
+  imports = [
+    ../../users/fortibrine.nix
+    ../../profiles/cloud-init-network.nix
+    ../../profiles/tailscale.nix
+    ../../profiles/podman.nix
+    ../../common/bundle.nix
+  ];
+
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/vda";
+
+  users.users.fortibrine.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKaVxFCJAVaf8lH79W5oEhcDQ+/mUA9m/KdbvHLcht2l"
+  ];
+  networking.hostName = "mexican-pearl18408";
+  time.timeZone = "Europe/Warsaw";
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  system.stateVersion = "26.05";
+
+}
