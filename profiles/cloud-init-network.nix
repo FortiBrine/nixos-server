@@ -1,13 +1,13 @@
 {
   networking.useDHCP = false;
-  networking.useNetworkd = true;
+  networking.networkmanager.enable = true;
+  networking.useNetworkd = lib.mkForce false;
 
   services.cloud-init = {
     enable = true;
     network.enable = true;
-
     settings = {
-      cloud_final_modules = [];
+      system_info.network.renderers = [ "network-manager" ];
     };
   };
 }
