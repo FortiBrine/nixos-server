@@ -18,6 +18,7 @@
   time.timeZone = "Europe/Warsaw";
 
   services.openssh.openFirewall = lib.mkForce false;
+  services.tailscale.useRoutingFeatures = "server";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "26.05";
