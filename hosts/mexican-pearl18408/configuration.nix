@@ -1,7 +1,7 @@
 { lib, ... }: {
   imports = [
     ../../users/fortibrine.nix
-    ../../profiles/cloud-init-network.nix
+    ./network.nix
     ../../profiles/tailscale.nix
     ../../profiles/podman.nix
     ../../common/bundle.nix
