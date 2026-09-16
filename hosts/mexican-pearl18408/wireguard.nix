@@ -25,6 +25,7 @@
         "fd42:8:8::1/64"
       ];
 
+      mtu = 1320;
       listenPort = 51820;
       privateKeyFile = config.age.secrets.wireguard-server-private-key.path;
 
