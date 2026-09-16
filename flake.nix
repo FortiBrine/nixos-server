@@ -23,6 +23,7 @@
         modules = [
           ./hosts/mexican-pearl18408/hardware-configuration.nix
           ./hosts/mexican-pearl18408/configuration.nix
+          agenix.nixosModules.default
         ];
       };
     };
