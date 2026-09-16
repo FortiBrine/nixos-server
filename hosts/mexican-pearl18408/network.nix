@@ -2,7 +2,7 @@
 {
   age.secrets.network-addresses = {
     file = ../../secrets/mexican-pearl18408/network-addresses.age;
-    mode = "0400";
+    mode = "0444";
     path = "/etc/systemd/network/10-eth0.network.d/50-addresses.conf";
   };
 
