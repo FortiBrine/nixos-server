@@ -15,4 +15,16 @@ in
     mexican-pearl18408
   ];
 
+  "mexican-pearl18408/wireguard-server-private-key.age".publicKeys = [
+    mexican-pearl18408
+  ];
+
+  "mexican-pearl18408/wireguard-client-client1-psk.age".publicKeys = [
+    mexican-pearl18408
+  ];
+
+  "mexican-pearl18408/wireguard-client-client2-psk.age".publicKeys = [
+    mexican-pearl18408
+  ];
+
 }
