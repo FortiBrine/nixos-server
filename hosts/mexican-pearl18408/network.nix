@@ -1,18 +1,14 @@
-{ ... }:
 {
   age.secrets.network-addresses = {
     file = ../../secrets/mexican-pearl18408/network-addresses.age;
     mode = "0444";
-    path = "/etc/systemd/network/10-eth0.network.d/50-addresses.conf";
+    path = "/etc/systemd/network/10-ens3.network.d/50-addresses.conf";
   };
 
   networking.useDHCP = false;
   networking.useNetworkd = true;
 
-  services.cloud-init.enable = false;
-  services.cloud-init.network.enable = false;
-
-  systemd.network.networks."10-eth0" = {
+  systemd.network.networks."10-ens3" = {
     matchConfig.MACAddress = "52:54:00:cc:b2:ff";
     linkConfig.MTUBytes = 1400;
 
