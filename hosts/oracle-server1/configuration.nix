@@ -3,7 +3,7 @@
     ../../users/fortibrine.nix
     ../../profiles/dhcp.nix
     ../../profiles/podman.nix
-    ../../profiles/tailscale.nix
+    ../../profiles/netbird.nix
     ../../apps/vaultwarden.nix
     ../../common/bundle.nix
   ];

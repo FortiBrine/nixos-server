@@ -3,7 +3,7 @@
     ../../users/fortibrine.nix
     ./network.nix
     ./wireguard.nix
-    ../../profiles/tailscale.nix
+    ../../profiles/netbird.nix
     ../../profiles/podman.nix
     ../../common/bundle.nix
   ];
