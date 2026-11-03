@@ -2,6 +2,8 @@
   services.netbird.enable = true;
 
   networking.firewall = {
-    trustedInterfaces = [ "wt0" ];
+    interfaces."wt0" = {
+      allowedTCPPorts = [ 2222 ];
+    };
   };
 }
