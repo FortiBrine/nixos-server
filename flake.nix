@@ -11,7 +11,7 @@
     agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, agenix, ... }@inputs: {
+  outputs = { self, nixpkgs, agenix, disko, ... }@inputs: {
     nixosConfigurations = {
       oracle-server1 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
