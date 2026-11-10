@@ -9,7 +9,7 @@
   ];
 
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.devices = lib.mkForce [ "/dev/vda" ];
 
   users.users.fortibrine.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ1cbhsiwj3UH6uhWggvYxgAISWgH18IjJu5DSamWJN0 fortibrine@opensuse"
