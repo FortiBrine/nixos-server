@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -24,6 +28,16 @@
           ./hosts/mexican-pearl18408/hardware-configuration.nix
           ./hosts/mexican-pearl18408/configuration.nix
           agenix.nixosModules.default
+        ];
+      };
+
+      envious-violet-caribou = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/envious-violet-caribou/hardware-configuration.nix
+          ./hosts/envious-violet-caribou/configuration.nix
+          agenix.nixosModules.default
+          disko.nixosModules.disko
         ];
       };
     };
